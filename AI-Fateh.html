@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Conference 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(-45deg, #4F46E5, #7C3AED, #EC4899, #10B981);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+    
+    .card-shadow {
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    }
+    
+    .text-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-gradient">TechConf 2025</div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+        <a href="#speakers" class="text-gray-700 hover:text-indigo-600 transition">Speakers</a>
+        <a href="#schedule" class="text-gray-700 hover:text-indigo-600 transition">Schedule</a>
+        <a href="#sponsors" class="text-gray-700 hover:text-indigo-600 transition">Sponsors</a>
+        <a href="#testimonials" class="text-gray-700 hover:text-indigo-600 transition">Testimonials</a>
+        <a href="#register" class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="gradient-bg text-white pt-32 pb-24 px-6 text-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+      <div class="absolute top-40 right-10 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 2s;"></div>
+      <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 4s;"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="inline-block bg-white/20 glass-effect px-4 py-2 rounded-full mb-6 text-sm font-semibold">
+        🚀 March 15-17, 2025 | San Francisco, CA
+      </div>
+      <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
+        The Future of<br />Technology Starts Here
+      </h1>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-gray-100">
+        Join 5,000+ innovators, developers, and industry leaders for three immersive days of cutting-edge insights, hands-on workshops, and game-changing connections.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#register" class="inline-block bg-white text-indigo-600 font-bold py-4 px-10 rounded-full shadow-2xl hover:shadow-xl hover:scale-105 transition transform">
+          Get Your Ticket
+        </a>
+        <a href="#schedule" class="inline-block glass-effect text-white font-semibold py-4 px-10 rounded-full hover:bg-white/20 transition">
+          View Schedule
+        </a>
+      </div>
+      
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div class="glass-effect p-6 rounded-2xl">
+          <div class="text-4xl font-bold mb-2">5000+</div>
+          <div class="text-sm text-gray-200">Attendees</div>
+        </div>
+        <div class="glass-effect p-6 rounded-2xl">
+          <div class="text-4xl font-bold mb-2">50+</div>
+          <div class="text-sm text-gray-200">Expert Speakers</div>
+        </div>
+        <div class="glass-effect p-6 rounded-2xl">
+          <div class="text-4xl font-bold mb-2">30+</div>
+          <div class="text-sm text-gray-200">Workshops</div>
+        </div>
+        <div class="glass-effect p-6 rounded-2xl">
+          <div class="text-4xl font-bold mb-2">100+</div>
+          <div class="text-sm text-gray-200">Tech Companies</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="text-indigo-600 font-bold mb-4 text-lg">WHY ATTEND</div>
+        <h2 class="text-5xl font-bold mb-6 text-gray-900">Experience Innovation at Its Finest</h2>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+          Tech Conference 2025 is where breakthrough ideas come to life. Connect with visionaries who are reshaping industries through AI, blockchain, quantum computing, and beyond. This isn't just another conference—it's where the future gets built.
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="bg-indigo-100 text-indigo-600 rounded-lg p-3 mt-1">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl mb-2">Cutting-Edge Content</h3>
+              <p class="text-gray-600">Learn from pioneers pushing the boundaries of what's possible in tech.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="bg-purple-100 text-purple-600 rounded-lg p-3 mt-1">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl mb-2">Network Like Never Before</h3>
+              <p class="text-gray-600">Build relationships with industry leaders and potential collaborators.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="bg-pink-100 text-pink-600 rounded-lg p-3 mt-1">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-xl mb-2">Hands-On Learning</h3>
+              <p class="text-gray-600">Dive deep with practical workshops and interactive sessions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800" alt="Conference" class="rounded-3xl shadow-2xl" />
+        <div class="absolute -bottom-8 -left-8 bg-emerald-500 text-white p-8 rounded-2xl shadow-xl">
+          <div class="text-4xl font-bold mb-2">97%</div>
+          <div class="text-sm">Would Recommend</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speakers Section -->
+  <section id="speakers" class="py-24 px-6 bg-gradient-to-br from-indigo-50 to-purple-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="text-indigo-600 font-bold mb-4 text-lg">WORLD-CLASS LINEUP</div>
+        <h2 class="text-5xl font-bold mb-6 text-gray-900">Meet Our Featured Speakers</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Learn from the brilliant minds who are shaping tomorrow's technology landscape.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-2xl p-8 card-shadow hover-scale cursor-pointer">
+          <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Speaker" class="w-32 h-32 rounded-full mx-auto mb-6 ring-4 ring-indigo-100" />
+          <h3 class="text-2xl font-bold mb-2 text-center">Alex Johnson</h3>
+          <p class="text-indigo-600 font-semibold text-center mb-4">AI Research Lead</p>
+          <p class="text-gray-600 text-center text-sm mb-4">OpenAI</p>
+          <div class="flex gap-2 justify-center flex-wrap">
+            <span class="bg-indigo-100 text-indigo-700 text-xs px-3 py-1 rounded-full">AI/ML</span>
+            <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Ethics</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-8 card-shadow hover-scale cursor-pointer">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Speaker" class="w-32 h-32 rounded-full mx-auto mb-6 ring-4 ring-purple-100" />
+          <h3 class="text-2xl font-bold mb-2 text-center">Maria Chen</h3>
+          <p class="text-purple-600 font-semibold text-center mb-4">Chief Technology Officer</p>
+          <p class="text-gray-600 text-center text-sm mb-4">InnovateX</p>
+          <div class="flex gap-2 justify-center flex-wrap">
+            <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Cloud</span>
+            <span class="bg-pink-100 text-pink-700 text-xs px-3 py-1 rounded-full">DevOps</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-8 card-shadow hover-scale cursor-pointer">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Speaker" class="w-32 h-32 rounded-full mx-auto mb-6 ring-4 ring-pink-100" />
+          <h3 class="text-2xl font-bold mb-2 text-center">David Kim</h3>
+          <p class="text-pink-600 font-semibold text-center mb-4">Founder & CEO</p>
+          <p class="text-gray-600 text-center text-sm mb-4">DevSprint</p>
+          <div class="flex gap-2 justify-center flex-wrap">
+            <span class="bg-pink-100 text-pink-700 text-xs px-3 py-1 rounded-full">Startups</span>
+            <span class="bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full">Scaling</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-8 card-shadow hover-scale cursor-pointer">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Speaker" class="w-32 h-32 rounded-full mx-auto mb-6 ring-4 ring-emerald-100" />
+          <h3 class="text-2xl font-bold mb-2 text-center">Sarah Williams</h3>
+          <p class="text-emerald-600 font-semibold text-center mb-4">VP of Engineering</p>
+          <p class="text-gray-600 text-center text-sm mb-4">TechGiant</p>
+          <div class="flex gap-2 justify-center flex-wrap">
+            <span class="bg-emerald-100 text-emerald-700 text-xs px-3 py-1 rounded-full">Leadership</span>
+            <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Architecture</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-8 card-shadow hover-scale cursor-pointer">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Speaker" class="w-32 h-32 rounded-full mx-auto mb-6 ring-4 ring-blue-100" />
+          <h3 class="text-2xl font-bold mb-2 text-center">James Rodriguez</h3>
+          <p class="text-blue-600 font-semibold text-center mb-4">Blockchain Architect</p>
+          <p class="text-gray-600 text-center text-sm mb-4">CryptoLabs</p>
+          <div class="flex gap-2 justify-center flex-wrap">
+            <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Web3</span>
+            <span class="bg-cyan-100 text-cyan-700 text-xs px-3 py-1 rounded-full">DeFi</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-8 card-shadow hover-scale cursor-pointer">
+          <img src="https://randomuser.me/api/portraits/women/89.jpg" alt="Speaker" class="w-32 h-32 rounded-full mx-auto mb-6 ring-4 ring-amber-100" />
+          <h3 class="text-2xl font-bold mb-2 text-center">Emily Zhang</h3>
+          <p class="text-amber-600 font-semibold text-center mb-4">Security Expert</p>
+          <p class="text-gray-600 text-center text-sm mb-4">CyberShield</p>
+          <div class="flex gap-2 justify-center flex-wrap">
+            <span class="bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full">Security</span>
+            <span class="bg-red-100 text-red-700 text-xs px-3 py-1 rounded-full">Privacy</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-8 card-shadow hover-scale cursor-pointer">
+          <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Speaker" class="w-32 h-32 rounded-full mx-auto mb-6 ring-4 ring-teal-100" />
+          <h3 class="text-2xl font-bold mb-2 text-center">Michael Brown</h3>
+          <p class="text-teal-600 font-semibold text-center mb-4">Data Scientist</p>
+          <p class="text-gray-600 text-center text-sm mb-4">DataVerse</p>
+          <div class="flex gap-2 justify-center flex-wrap">
+            <span class="bg-teal-100 text-teal-700 text-xs px-3 py-1 rounded-full">Big Data</span>
+            <span class="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">Analytics</span>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-8 card-shadow hover-scale cursor-pointer">
+          <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="Speaker" class="w-32 h-32 rounded-full mx-auto mb-6 ring-4 ring-rose-100" />
+          <h3 class="text-2xl font-bold mb-2 text-center">Lisa Park</h3>
+          <p class="text-rose-600 font-semibold text-center mb-4">UX Director</p>
+          <p class="text-gray-600 text-center text-sm mb-4">DesignCo</p>
+          <div class="flex gap-2 justify-center flex-wrap">
+            <span class="bg-rose-100 text-rose-700 text-xs px-3 py-1 rounded-full">UX/UI</span>
+            <span class="bg-pink-100 text-pink-700 text-xs px-3 py-1 rounded-full">Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="text-indigo-600 font-bold mb-4 text-lg">THREE PACKED DAYS</div>
+      <h2 class="text-5xl font-bold mb-6 text-gray-900">Event Schedule</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Every session is designed to inspire, educate, and empower you.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-3xl p-8 card-shadow hover-scale">
+        <div class="text-sm font-bold mb-4 opacity-90">DAY 1 • MARCH 15</div>
+        <h3 class="text-3xl font-bold mb-6">Innovation Keynotes</h3>
+        <div class="space-y-4">
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">9:00 AM - 10:30 AM</div>
+            <div class="font-semibold">Opening Keynote: The AI Revolution</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">11:00 AM - 12:30 PM</div>
+            <div class="font-semibold">Blockchain Beyond Crypto</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">2:00 PM - 3:30 PM</div>
+            <div class="font-semibold">Cloud Computing at Scale</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">4:00 PM - 6:00 PM</div>
+            <div class="font-semibold">Networking Reception</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-purple-500 to-pink-600 text-white rounded-3xl p-8 card-shadow hover-scale">
+        <div class="text-sm font-bold mb-4 opacity-90">DAY 2 • MARCH 16</div>
+        <h3 class="text-3xl font-bold mb-6">Workshops & Panels</h3>
+        <div class="space-y-4">
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">9:00 AM - 12:00 PM</div>
+            <div class="font-semibold">Hands-on: Building with AI APIs</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">1:00 PM - 3:00 PM</div>
+            <div class="font-semibold">Panel: Future of Work</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">3:30 PM - 5:30 PM</div>
+            <div class="font-semibold">Security Best Practices Workshop</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">6:00 PM - 8:00 PM</div>
+            <div class="font-semibold">VIP Dinner & Discussions</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-gradient-to-br from-pink-500 to-orange-600 text-white rounded-3xl p-8 card-shadow hover-scale">
+        <div class="text-sm font-bold mb-4 opacity-90">DAY 3 • MARCH 17</div>
+        <h3 class="text-3xl font-bold mb-6">Startup Showcase</h3>
+        <div class="space-y-4">
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">9:00 AM - 11:00 AM</div>
+            <div class="font-semibold">Startup Pitch Competition</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">11:30 AM - 1:00 PM</div>
+            <div class="font-semibold">Innovation Expo & Demo</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">2:00 PM - 3:30 PM</div>
+            <div class="font-semibold">Closing Keynote: What's Next</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+            <div class="text-sm opacity-90 mb-1">4:00 PM - 6:00 PM</div>
+            <div class="font-semibold">Final Networking & Farewell</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsors Section -->
+  <section id="sponsors" class="py-24 px-6 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto text-center">
+      <div class="text-indigo-400 font-bold mb-4 text-lg">POWERED BY</div>
+      <h2 class="text-5xl font-bold mb-16">Our Amazing Sponsors</h2>
+      
+      <div class="mb-16">
+        <div class="text-gray-400 mb-8 text-sm font-semibold">PLATINUM SPONSORS</div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-32 hover-scale">
+            <div class="text-2xl font-bold text-gray-300">TechCorp</div>
+          </div>
+          <div class="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-32 hover-scale">
+            <div class="text-2xl font-bold text-gray-300">CloudSys</div>
+          </div>
+          <div class="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-32 hover-scale">
+            <div class="text-2xl font-bold text-gray-300">DataFlow</div>
+          </div>
+          <div class="bg-gray-800 rounded-2xl p-8 flex items-center justify-center h-32 hover-scale">
+            <div class="text-2xl font-bold text-gray-300">AI Labs</div>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="text-gray-400 mb-8 text-sm font-semibold">GOLD SPONSORS</div>
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-6">
+          <div class="bg-gray-800 rounded-xl p-6 flex items-center justify-center h-24 hover-scale">
+            <div class="text-lg font-semibold text-gray-400">WebScale</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="text-indigo-600 font-bold mb-4 text-lg">WHAT ATTENDEES SAY</div>
+      <h2 class="text-5xl font-bold mb-6 text-gray-900">Real Stories, Real Impact</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Don't just take our word for it—hear from past attendees who transformed their careers.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-8 card-shadow hover-scale">
+        <div class="flex items-center mb-6">
+          <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Attendee" class="w-16 h-16 rounded-full mr-4" />
+          <div>
+            <div class="font-bold text-lg">Jessica Martinez</div>
+            <div class="text-gray-500 text-sm">Software Engineer @ Google</div>
+          </div>
+        </div>
+        <div class="flex mb-4">
+          <span class="text-yellow-400">★★★★★</span>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          "This conference completely changed my perspective on AI. The workshops were incredibly hands-on, and I made connections that led to my dream job!"
+        </p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-8 card-shadow hover-scale">
+        <div class="flex items-center mb-6">
+          <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Attendee" class="w-16 h-16 rounded-full mr-4" />
+          <div>
+            <div class="font-bold text-lg">Robert Chen</div>
+            <div class="text-gray-500 text-sm">CTO @ TechStartup</div>
+          </div>
+        </div>
+        <div class="flex mb-4">
+          <span class="text-yellow-400">★★★★★</span>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          "Best tech conference I've attended in 10 years. The speaker lineup was world-class, and the networking opportunities were unmatched."
+        </p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-8 card-shadow hover-scale">
+        <div class="flex items-center mb-6">
+          <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Attendee" class="w-16 h-16 rounded-full mr-4" />
+          <div>
+            <div class="font-bold text-lg">Amanda Lee</div>
+            <div class="text-gray-500 text-sm">Product Manager @ Microsoft</div>
+          </div>
+        </div>
+        <div class="flex mb-4">
+          <span class="text-yellow-400">★★★★★</span>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          "I learned more in three days than I did in six months of online courses. The insights on blockchain and Web3 were game-changing."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="py-24 px-6 bg-gradient-to-br from-gray-50 to-indigo-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="text-indigo-600 font-bold mb-4 text-lg">FLEXIBLE OPTIONS</div>
+        <h2 class="text-5xl font-bold mb-6 text-gray-900">Choose Your Pass</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Select the perfect ticket for your goals. Early bird pricing ends soon!
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl p-8 card-shadow hover-scale">
+          <div class="text-indigo-600 font-bold mb-2">BASIC</div>
+          <div class="text-5xl font-bold mb-2">$299</div>
+          <div class="text-gray-500 mb-8">Access to keynotes</div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">All keynote sessions</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Expo hall access</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Conference materials</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Networking events</span>
+            </li>
+          </ul>
+          <a href="#register" class="block w-full bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold py-4 rounded-xl text-center transition">
+            Select Basic
+          </a>
+        </div>
+        
+        <div class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-3xl p-8 card-shadow hover-scale transform scale-105 relative">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-gray-900 px-6 py-2 rounded-full text-sm font-bold">
+            MOST POPULAR
+          </div>
+          <div class="font-bold mb-2 opacity-90">PRO</div>
+          <div class="text-5xl font-bold mb-2">$699</div>
+          <div class="opacity-90 mb-8">Full conference access</div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-yellow-300 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Everything in Basic</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-yellow-300 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>All workshops & panels</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-yellow-300 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>VIP networking dinner</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-yellow-300 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Recording access (1 year)</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-yellow-300 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Priority seating</span>
+            </li>
+          </ul>
+          <a href="#register" class="block w-full bg-white hover:bg-gray-100 text-indigo-600 font-bold py-4 rounded-xl text-center transition">
+            Select Pro
+          </a>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-8 card-shadow hover-scale">
+          <div class="text-purple-600 font-bold mb-2">VIP</div>
+          <div class="text-5xl font-bold mb-2">$1,299</div>
+          <div class="text-gray-500 mb-8">Ultimate experience</div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Everything in Pro</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Meet & greet with speakers</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Exclusive VIP lounge</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Premium swag package</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700">Private coaching session</span>
+            </li>
+          </ul>
+          <a href="#register" class="block w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 rounded-xl text-center transition">
+            Select VIP
+          </a>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <p class="text-gray-600">🎉 <span class="font-semibold">Early Bird Special:</span> Save 30% if you register before February 1st</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-24 px-6 max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="text-indigo-600 font-bold mb-4 text-lg">GOT QUESTIONS?</div>
+      <h2 class="text-5xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="space-y-6">
+      <div class="bg-white rounded-2xl p-8 card-shadow">
+        <h3 class="text-xl font-bold mb-3 text-gray-900">Where is the conference held?</h3>
+        <p class="text-gray-600">The conference will be held at the Moscone Center in San Francisco, California. The venue is easily accessible via public transportation and offers state-of-the-art facilities.</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-8 card-shadow">
+        <h3 class="text-xl font-bold mb-3 text-gray-900">Is there a virtual attendance option?</h3>
+        <p class="text-gray-600">Yes! We offer a virtual pass for $199 that includes live streaming of all keynotes and access to recordings for one year. However, workshops and networking events are in-person only.</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-8 card-shadow">
+        <h3 class="text-xl font-bold mb-3 text-gray-900">What's the refund policy?</h3>
+        <p class="text-gray-600">Full refunds are available up to 30 days before the event. After that, tickets can be transferred to another person but are non-refundable.</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-8 card-shadow">
+        <h3 class="text-xl font-bold mb-3 text-gray-900">Are meals included?</h3>
+        <p class="text-gray-600">All passes include breakfast and lunch each day. Pro and VIP passes also include the networking dinner on Day 2. Coffee and snacks are available throughout the day.</p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-8 card-shadow">
+        <h3 class="text-xl font-bold mb-3 text-gray-900">Can I get a student discount?</h3>
+        <p class="text-gray-600">Absolutely! Students get 50% off any pass with valid student ID. Contact our support team with proof of enrollment to receive your discount code.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="register" class="relative py-24 px-6 overflow-hidden">
+    <div class="absolute inset-0 gradient-bg"></div>
+    <div class="relative z-10 max-w-3xl mx-auto text-center text-white">
+      <h2 class="text-5xl md:text-6xl font-bold mb-6">Ready to Transform Your Future?</h2>
+      <p class="text-xl mb-12 text-gray-100">
+        Join thousands of innovators shaping tomorrow's technology. Limited spots remaining!
+      </p>
+      
+      <div class="bg-white/10 glass-effect rounded-3xl p-8 md:p-12 backdrop-blur-lg">
+        <div class="flex flex-col gap-4 mb-6">
+          <input 
+            type="text" 
+            placeholder="Full Name" 
+            class="w-full p-4 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/50"
+          />
+          <input 
+            type="email" 
+            placeholder="Email Address" 
+            class="w-full p-4 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/50"
+          />
+          <input 
+            type="text" 
+            placeholder="Company / Organization" 
+            class="w-full p-4 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/50"
+          />
+          <select class="w-full p-4 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/50">
+            <option>Select Your Pass</option>
+            <option>Basic Pass - $299</option>
+            <option>Pro Pass - $699 (Most Popular)</option>
+            <option>VIP Pass - $1,299</option>
+            <option>Virtual Pass - $199</option>
+          </select>
+        </div>
+        
+        <button class="w-full bg-amber-400 hover:bg-amber-500 text-gray-900 font-bold py-5 rounded-xl text-lg shadow-2xl transform hover:scale-105 transition">
+          Complete Registration →
+        </button>
+        
+        <p class="text-sm text-gray-200 mt-6">
+          🔒 Secure checkout • 💳 All major cards accepted • 📧 Instant confirmation
+        </p>
+      </div>
+      
+      <div class="mt-12 flex flex-wrap justify-center gap-8 text-sm">
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span>30-Day Refund</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+          <span>Secure Payment</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+          </svg>
+          <span>24/7 Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="text-2xl font-bold text-white mb-4">TechConf 2025</div>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            The premier technology conference bringing together innovators, developers, and industry leaders.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-white mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#about" class="hover:text-white transition">About</a></li>
+            <li><a href="#speakers" class="hover:text-white transition">Speakers</a></li>
+            <li><a href="#schedule" class="hover:text-white transition">Schedule</a></li>
+            <li><a href="#register" class="hover:text-white transition">Register</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-white mb-4">Resources</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+            <li><a href="#" class="hover:text-white transition">Venue</a></li>
+            <li><a href="#" class="hover:text-white transition">Hotels</a></li>
+            <li><a href="#" class="hover:text-white transition">Travel</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-white mb-4">Connect</h3>
+          <div class="flex gap-4 mb-6">
+            <a href="#" class="bg-gray-800 hover:bg-indigo-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <span class="text-lg">𝕏</span>
+            </a>
+            <a href="#" class="bg-gray-800 hover:bg-indigo-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <span class="text-lg">in</span>
+            </a>
+            <a href="#" class="bg-gray-800 hover:bg-indigo-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <span class="text-lg">f</span>
+            </a>
+          </div>
+          <div class="text-sm">
+            <div class="font-semibold text-white mb-2">Contact Us</div>
+            <div>info@techconf2025.com</div>
+            <div>+1 (555) 123-4567</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+        <div>&copy; 2025 Tech Conference. All rights reserved.</div>
+        <div class="flex gap-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+          <a href="#" class="hover:text-white transition">Code of Conduct</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Add scroll-based animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(30px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+  </script>
+
+</body>
